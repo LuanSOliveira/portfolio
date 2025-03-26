@@ -29,7 +29,7 @@ const JourneyHistory = () => {
         modules={[EffectCreative]}
         className="mySwiper h-[90%]"
       >
-        <SwiperSlide className="bg-black/60 backdrop-blur-md p-4 rounded-lg">
+        <SwiperSlide className="bg-green/60 backdrop-blur-md p-4 rounded-lg">
           <div className="w-full">
             <h3 className="text-center mb-2 text-title-size">
               {ShowAboutText(language, "text8")}
@@ -39,7 +39,7 @@ const JourneyHistory = () => {
             </h3>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-black/60 backdrop-blur-md p-4 rounded-lg">
+        <SwiperSlide className="bg-green/60 backdrop-blur-lg p-4 rounded-lg">
           <div className="w-full h-full">
             <h3 className="text-center mb-2 text-title-size">
               {ShowAboutText(language, "text10")}
@@ -49,7 +49,7 @@ const JourneyHistory = () => {
             </h3>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-black/60 backdrop-blur-md p-4 rounded-lg">
+        <SwiperSlide className="bg-green/60 backdrop-blur-lg p-4 rounded-lg">
           <div className="w-full h-full">
             <h3 className="text-center mb-2 text-title-size">
               {ShowAboutText(language, "text12")}
@@ -59,7 +59,7 @@ const JourneyHistory = () => {
             </h3>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-black/60 backdrop-blur-md p-4 rounded-lg">
+        <SwiperSlide className="bg-green/60 backdrop-blur-lg p-4 rounded-lg">
           <div className="w-full h-full">
             <h3 className="text-center mb-2 text-title-size">
               {ShowAboutText(language, "text14")}
