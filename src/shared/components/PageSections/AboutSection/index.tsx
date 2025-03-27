@@ -14,7 +14,7 @@ const AboutSection = () => {
           {ShowAboutText(language, "text1")}
         </h2>
         <div className="flex gap-20 h-[85%] max-h-[85%] ">
-          <div className="w-full overflow-y-auto flex flex-col gap-3 text-justify p-5 bg-[#0000006b] rounded-2xl">
+          <div className="w-full overflow-y-auto flex flex-col gap-3 text-justify p-5 bg-default-board rounded-2xl">
             <h3>{ShowAboutText(language, "text2")}</h3>
             <h3>{ShowAboutText(language, "text3")}</h3>
             <h3>{ShowAboutText(language, "text4")}</h3>

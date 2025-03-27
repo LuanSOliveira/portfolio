@@ -11,4 +11,8 @@
 
   /*FONT COLOR*/
   --color-default-color: #fff;
+  --color-green-text-color: #2bff00;
+
+  /*BACKGROUND COLOR*/
+  --color-default-board: #0000006b;
 }

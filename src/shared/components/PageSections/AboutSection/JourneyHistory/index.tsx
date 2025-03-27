@@ -12,7 +12,7 @@ const JourneyHistory = () => {
   const { language } = useLanguageStore();
 
   return (
-    <div className="w-[40%] p-5 bg-[#0000006b] rounded-2xl">
+    <div className="w-[40%] p-5 bg-default-board rounded-2xl">
       <h2 className="text-2-title-size">{ShowAboutText(language, "text7")}</h2>
       <Swiper
         grabCursor={true}
