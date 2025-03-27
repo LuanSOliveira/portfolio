@@ -1,7 +1,7 @@
 "use client";
 
 import { Tab, Tabs } from "@mui/material";
-import { DeveloperBoard, LibraryBooks, StarRate } from "@mui/icons-material";
+import { DeveloperBoard, StarRate } from "@mui/icons-material";
 
 interface Props {
   tabValue: number;
@@ -39,18 +39,6 @@ const KnowledgeTabs = ({ tabValue, setTabValue }: Props) => {
       <Tab
         icon={<DeveloperBoard />}
         label="outros"
-        sx={{
-          color: "#116600",
-          fontFamily: "'VT323', monospace",
-          fontSize: "25px",
-          "&.Mui-selected": {
-            color: "#2bff00",
-          },
-        }}
-      />
-      <Tab
-        icon={<LibraryBooks />}
-        label="pacotes"
         sx={{
           color: "#116600",
           fontFamily: "'VT323', monospace",
