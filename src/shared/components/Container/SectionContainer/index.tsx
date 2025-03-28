@@ -6,7 +6,7 @@ interface Props {
 
 const SectionContainer = ({ children }: Props) => {
   return (
-    <section className="pt-20 px-[10%] flex justify-center items-center w-screen h-screen">
+    <section className="py-20 px-[10%] flex justify-center items-center w-screen h-screen">
       {children}
     </section>
   );

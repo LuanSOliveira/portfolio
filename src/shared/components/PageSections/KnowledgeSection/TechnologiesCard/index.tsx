@@ -27,7 +27,7 @@ const TechnologiesCard = ({ technology }: Props) => {
       />
 
       <div
-        className="bg-default-board p-5 rounded-2xl cursor-pointer"
+        className="bg-default-board hover:bg-default-hover-board p-5 rounded-2xl cursor-pointer"
         onClick={handleClickOpen}
       >
         <div className="flex justify-center">
