@@ -122,6 +122,18 @@ export const myTechnologies: ITechnologies[] = [
     level: 4,
   },
   {
+    name: "ViteJS",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+    section: "hard",
+    description: {
+      pt: "Vite é uma ferramenta de construção de frontend extremamente rápida que impulsiona a próxima geração de aplicativos web.",
+      en: "Vite is a blazing fast frontend build tool powering the next generation of web applications.",
+    },
+    like: 5,
+    level: 4,
+  },
+  {
     name: "Node",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",

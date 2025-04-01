@@ -1,8 +1,5 @@
 "use client";
 
-import { Rating } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { ITechnologies } from "@/shared/interfaces";
 import { useState } from "react";
 import TechnologiesModal from "../TechnologiesModal";

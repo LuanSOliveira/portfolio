@@ -1,15 +1,11 @@
 import { TTechnologiesSections } from "@/shared/types";
-
-interface ITechnologiesDescription {
-  pt: string;
-  en: string;
-}
+import { IDescription } from "../Description";
 
 export interface ITechnologies {
   name: string;
   image: string;
   section: TTechnologiesSections;
-  description: ITechnologiesDescription;
+  description: IDescription;
   like: number;
   level: number;
 }
