@@ -7,16 +7,19 @@ import OthersBoard from "./Boards/OthersBoard";
 import AppTab from "../../AppTab";
 import { DeveloperBoard, StarRate } from "@mui/icons-material";
 import { ITab } from "@/shared/interfaces";
+import { useLanguageStore } from "@/Store";
+import { ShowKnowledgeText } from "@/constants/texts/KnowledgeTexts";
 
 const KnowledgeSection = () => {
   const [tabValue, setTabValue] = useState<number>(0);
+  const { language } = useLanguageStore();
   const tabList: ITab[] = [
     {
-      label: "favoritos",
+      label: ShowKnowledgeText(language, "text2"),
       icon: <StarRate />,
     },
     {
-      label: "outros",
+      label: ShowKnowledgeText(language, "text3"),
       icon: <DeveloperBoard />,
     },
   ];
@@ -24,7 +27,9 @@ const KnowledgeSection = () => {
   return (
     <SectionContainer>
       <div className="w-full min-h-[85%]">
-        <h2 className="text-4-title-size">Meus Conhecimentos</h2>
+        <h2 className="text-4-title-size">
+          {ShowKnowledgeText(language, "text1")}
+        </h2>
         <AppTab
           tabValue={tabValue}
           setTabValue={setTabValue}

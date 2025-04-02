@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { useEffect } from "react";
 import TechnologiesRateBoard from "../TechnologiesRateBoard";
+import { useLanguageStore } from "@/Store";
 
 interface Props {
   technology: ITechnologies;
@@ -17,6 +18,8 @@ interface Props {
 }
 
 const TechnologiesModal = ({ technology, open, setOpen }: Props) => {
+  const { language } = useLanguageStore();
+
   useEffect(() => {
     if (open) {
       const handleScroll = (event: WheelEvent) => {
@@ -58,29 +61,23 @@ const TechnologiesModal = ({ technology, open, setOpen }: Props) => {
         {technology.name}
       </DialogTitle>
       <DialogContent>
-        <DialogContentText
-          sx={{
-            fontSize: "1rem",
-            color: "#FFF",
-            fontFamily: "'VT323', monospace",
-          }}
-        >
-          <div className="flex gap-5">
-            <img
-              src={technology.image}
-              alt={`icon-${technology.name}`}
-              width={110}
-              height={110}
-            />
-            <TechnologiesRateBoard
-              like={technology.like}
-              level={technology.level}
-            />
-          </div>
-          <p className="mt-2 text-justify text-default-size">
-            {technology.description.pt}
-          </p>
-        </DialogContentText>
+        <div className="flex gap-5">
+          <img
+            src={technology.image}
+            alt={`icon-${technology.name}`}
+            width={110}
+            height={110}
+          />
+          <TechnologiesRateBoard
+            like={technology.like}
+            level={technology.level}
+          />
+        </div>
+        <p className="mt-2 text-justify text-default-size">
+          {language !== "en"
+            ? technology.description.pt
+            : technology.description.en}
+        </p>
       </DialogContent>
     </Dialog>
   );

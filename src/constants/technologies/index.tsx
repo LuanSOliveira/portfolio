@@ -199,8 +199,8 @@ export const myTechnologies: ITechnologies[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
     section: "other",
     description: {
-      pt: "Sistema de gerenciamento de banco de dados relacional objeto.",
-      en: "Object-relational database management system.",
+      pt: "Sistema de gerenciamento de banco de dados relacional.",
+      en: "Relational database management system.",
     },
     like: 4,
     level: 1,

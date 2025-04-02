@@ -3,6 +3,8 @@
 import { Rating } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { useLanguageStore } from "@/Store";
+import { ShowKnowledgeText } from "@/constants/texts/KnowledgeTexts";
 
 interface Props {
   like: number;
@@ -10,10 +12,11 @@ interface Props {
 }
 
 const TechnologiesRateBoard = ({ like, level }: Props) => {
+  const { language } = useLanguageStore();
   return (
     <div className="mt-2">
       <div>
-        <p className="text-mini-size">O quanto gosto:</p>
+        <p className="text-mini-size">{ShowKnowledgeText(language, "text8")}</p>
         <Rating
           size="small"
           icon={<FavoriteIcon fontSize="inherit" />}
@@ -31,7 +34,7 @@ const TechnologiesRateBoard = ({ like, level }: Props) => {
         />
       </div>
       <div>
-        <p className="text-mini-size">O quanto utilizei:</p>
+        <p className="text-mini-size">{ShowKnowledgeText(language, "text9")}</p>
         <Rating
           size="small"
           value={level}

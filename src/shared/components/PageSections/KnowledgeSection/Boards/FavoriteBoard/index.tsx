@@ -2,14 +2,15 @@
 
 import { myTechnologies } from "@/constants";
 import TechnologiesCard from "../../TechnologiesCard";
+import { useLanguageStore } from "@/Store";
+import { ShowKnowledgeText } from "@/constants/texts/KnowledgeTexts";
 
 const FavoriteBoard = () => {
+  const { language } = useLanguageStore();
   return (
     <div>
-      <h3>Tecnologias Favoritas</h3>
-      <p>
-        Aqui estão listadas as tecnologias que mais utilizo no meu dia a dia.
-      </p>
+      <h3>{ShowKnowledgeText(language, "text4")}</h3>
+      <p>{ShowKnowledgeText(language, "text5")}</p>
       <div className="flex gap-5 flex-wrap mt-5">
         {myTechnologies
           .filter((tec) => tec.section === "hard")
