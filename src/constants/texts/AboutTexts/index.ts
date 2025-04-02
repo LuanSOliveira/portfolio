@@ -61,6 +61,10 @@ const aboutText = {
     pt: "Hoje, atuo como Desenvolvedor Front-End, sempre buscando aprimorar minhas habilidades e explorar novas tecnologias. Meu objetivo é crescer constantemente na área, contribuindo para o desenvolvimento de soluções inovadoras e entregando experiências digitais de qualidade.",
     en: "Today, I work as a Front-End Developer, always seeking to improve my skills and explore new technologies. My goal is to continuously grow in the field, contribute to the development of innovative solutions, and deliver high-quality digital experiences.",
   },
+  text16: {
+    pt: "Arrastar",
+    en: "Drag",
+  },
 };
 
 type AboutText = keyof typeof aboutText;

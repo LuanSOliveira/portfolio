@@ -20,11 +20,12 @@ const TecSlider = () => {
         disableOnInteraction: false,
       }}
       modules={[Pagination, Navigation, FreeMode, Autoplay]}
-      className="mySwiper max-w-[1000px]"
+      className="mySwiper max-w-[1000px] bg-[#0f0f0f7c] rounded-4xl mt-20"
     >
       {myTechnologies.map((tec) => (
-        <SwiperSlide key={tec.name}>
+        <SwiperSlide key={tec.name} className="pl-10">
           <img
+            className="py-3"
             width={50}
             height={50}
             src={tec.image}
