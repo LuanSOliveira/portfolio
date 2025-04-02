@@ -23,10 +23,11 @@ const PresentationSection = () => {
             <h2 className="text-2-title-size text-center">
               {ShowPresentationText(language, "text3")}
             </h2>
-            <h2>{ShowPresentationText(language, "text4")}</h2>
+            <h2 className="text-center">
+              {ShowPresentationText(language, "text4")}
+            </h2>
           </div>
-
-          <img src="/avatar.png" alt="avatar" />
+          <img src="/avatar_4.png" alt="avatar" className="w-[450px]" />
         </div>
         <div className="mt-5">
           <TecSlider />
