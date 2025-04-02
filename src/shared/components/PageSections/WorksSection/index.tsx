@@ -7,23 +7,28 @@ import { ITab } from "@/shared/interfaces";
 import { Person, Work } from "@mui/icons-material";
 import ProfessionalBoard from "./Boards/ProfessionalBoard";
 import PersonalBoard from "./Boards/PersonalBoard";
+import { useLanguageStore } from "@/Store";
+import { ShowWorksText } from "@/constants";
 
 const WorksSection = () => {
   const [tabValue, setTabValue] = useState<number>(0);
+  const { language } = useLanguageStore();
   const tabList: ITab[] = [
     {
-      label: "profissional",
+      label: ShowWorksText(language, "text2"),
       icon: <Work />,
     },
     {
-      label: "pessoal",
+      label: ShowWorksText(language, "text3"),
       icon: <Person />,
     },
   ];
   return (
     <SectionContainer>
       <div className="w-full min-h-[85%]">
-        <h2 className="text-4-title-size">Meus Trabalhos</h2>
+        <h2 className="text-4-title-size">
+          {ShowWorksText(language, "text1")}
+        </h2>
         <AppTab
           tabValue={tabValue}
           setTabValue={setTabValue}

@@ -1,13 +1,19 @@
 "use client";
 
+import { ShowContactText } from "@/constants";
+import { useLanguageStore } from "@/Store";
+
 const LinksBoard = () => {
+  const { language } = useLanguageStore();
   const linkedin =
     "https://www.linkedin.com/in/luan-santos-oliveira-4b2a011a3/";
   const github = "https://github.com/LuanSOliveira";
 
   return (
     <div>
-      <h3 className="text-2-title-size">Redes:</h3>
+      <h3 className="text-2-title-size">
+        {ShowContactText(language, "text2")}
+      </h3>
       <div className="flex gap-5">
         <a href={linkedin} target="_blank">
           <img

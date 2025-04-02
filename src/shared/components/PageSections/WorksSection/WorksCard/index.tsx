@@ -1,13 +1,15 @@
 "use client";
 
-import { myTechnologies } from "@/constants";
+import { myTechnologies, ShowWorksText } from "@/constants";
 import { IWorks } from "@/shared/interfaces";
+import { useLanguageStore } from "@/Store";
 
 interface Props {
   work: IWorks;
 }
 
 const WorksCard = ({ work }: Props) => {
+  const { language } = useLanguageStore();
   return (
     <div className="bg-default-board hover:bg-default-hover-board p-5 rounded-2xl cursor-pointer">
       <div className="flex justify-center items-center bg-white w-[250px] h-[150px] rounded-sm">
@@ -20,7 +22,7 @@ const WorksCard = ({ work }: Props) => {
       </div>
       <h3 className="text-center">{work.name}</h3>
       <div className="mt-5">
-        <h3>Tecnologias Utilizadas:</h3>
+        <h3>{ShowWorksText(language, "text8")}</h3>
         <div className="flex flex-wrap gap-3 mt-2">
           {work.technologiesIndexList.map((tec) => (
             <img
