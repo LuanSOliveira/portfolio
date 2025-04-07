@@ -12,6 +12,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 5,
+    id: 0,
   },
   {
     name: "CSS",
@@ -24,6 +25,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 5,
+    id: 1,
   },
   {
     name: "SASS",
@@ -36,6 +38,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 4,
+    id: 2,
   },
   {
     name: "TailwindCSS",
@@ -48,6 +51,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 5,
+    id: 3,
   },
   {
     name: "Javascript",
@@ -60,6 +64,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 5,
+    id: 4,
   },
   {
     name: "Typescript",
@@ -72,6 +77,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 5,
+    id: 5,
   },
   {
     name: "React",
@@ -84,6 +90,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 5,
+    id: 6,
   },
   {
     name: "Next.JS",
@@ -96,6 +103,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 5,
+    id: 7,
   },
   {
     name: "Angular",
@@ -108,6 +116,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 3,
+    id: 8,
   },
   {
     name: "MaterialUI",
@@ -120,6 +129,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 4,
+    id: 9,
   },
   {
     name: "ViteJS",
@@ -132,6 +142,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 4,
+    id: 10,
   },
   {
     name: "Node",
@@ -144,6 +155,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 2,
+    id: 11,
   },
   {
     name: "NestJS",
@@ -156,6 +168,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 2,
+    id: 12,
   },
   {
     name: "npm",
@@ -168,6 +181,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 5,
+    id: 13,
   },
   {
     name: "Jest",
@@ -180,6 +194,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 1,
+    id: 14,
   },
   {
     name: "Firebase",
@@ -192,6 +207,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 2,
+    id: 15,
   },
   {
     name: "Postgresql",
@@ -204,6 +220,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 1,
+    id: 16,
   },
   {
     name: "AzureDevOps",
@@ -216,6 +233,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 3,
+    id: 17,
   },
   {
     name: "Antdesign",
@@ -228,6 +246,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 1,
+    id: 18,
   },
   {
     name: "Git",
@@ -240,6 +259,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 5,
+    id: 19,
   },
   {
     name: "Python",
@@ -252,6 +272,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 1,
+    id: 20,
   },
   {
     name: "Figma",
@@ -264,6 +285,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 4,
+    id: 21,
   },
   {
     name: "Framermotion",
@@ -276,6 +298,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 4,
+    id: 22,
   },
   {
     name: "Postman",
@@ -288,6 +311,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 3,
+    id: 23,
   },
   {
     name: "Redux",
@@ -300,6 +324,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 3,
+    id: 24,
   },
   {
     name: "Storybook",
@@ -312,6 +337,7 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 5,
     level: 1,
+    id: 25,
   },
   {
     name: "Trello",
@@ -324,5 +350,6 @@ export const myTechnologies: ITechnologies[] = [
     },
     like: 4,
     level: 3,
+    id: 26,
   },
 ];

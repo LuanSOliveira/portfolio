@@ -10,7 +10,7 @@ interface Props {
 }
 
 const TechnologiesCard = ({ technology }: Props) => {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState<boolean>(false);
 
   const handleClickOpen = () => {
     setOpenModal(true);
