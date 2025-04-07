@@ -11,4 +11,6 @@ export interface IWorks {
   type: TWorksType;
   technologiesIndexList: number[];
   link?: string;
+  repository?: string;
+  cmmi?: boolean;
 }

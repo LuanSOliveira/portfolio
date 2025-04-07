@@ -1,9 +1,10 @@
 "use client";
 
+import { APP_IMAGES } from "@/assets";
 import { myTechnologies, ShowWorksText } from "@/constants";
 import { IWorks } from "@/shared/interfaces";
 import { useLanguageStore } from "@/Store";
-import { Dialog, DialogContent, DialogTitle } from "@mui/material";
+import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
 import { useEffect } from "react";
 
 interface Props {
@@ -33,6 +34,10 @@ const WorksModal = ({ work, open, setOpen }: Props) => {
     setOpen(false);
   };
 
+  const handleOpenLink = (link: string) => {
+    window.open(link, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <Dialog
       open={open}
@@ -56,13 +61,26 @@ const WorksModal = ({ work, open, setOpen }: Props) => {
         {work.name}
       </DialogTitle>
       <DialogContent>
+        {work.cmmi && (
+          <div className="flex gap-5 items-center mb-5">
+            <img
+              src={APP_IMAGES.cmmiLogo}
+              className="rounded-full"
+              alt="cmmi-logo"
+              width={50}
+              height={50}
+            />
+            <span>{ShowWorksText(language, "text9")}</span>
+          </div>
+        )}
         <div className="flex gap-5 items-start">
           <div className="flex justify-center items-center bg-white w-[250px] h-[150px] rounded-sm">
             <img
+              className={`w-[${work.imageW}px] max-w-[${work.imageW}px] h-[${work.imageH}px] max-h-[${work.imageH}px] rounded-xs`}
               src={work.image}
-              alt={`icon-${work.name}`}
-              width={110}
-              height={110}
+              alt={`logo-${work.name}`}
+              width={work.imageW}
+              height={work.imageH}
             />
           </div>
           <div>
@@ -81,9 +99,33 @@ const WorksModal = ({ work, open, setOpen }: Props) => {
             </div>
           </div>
         </div>
-        <p className="mt-2 text-justify text-default-size">
+        <p className="my-2 text-justify text-default-size">
           {language !== "en" ? work.description.pt : work.description.en}
         </p>
+        <div className="flex gap-5 items-center justify-end">
+          {work.link && (
+            <Button
+              variant="contained"
+              size="small"
+              color="success"
+              onClick={() => handleOpenLink(work?.link ? work.link : "")}
+            >
+              {ShowWorksText(language, "text10")}
+            </Button>
+          )}
+          {work.repository && (
+            <Button
+              variant="contained"
+              size="small"
+              color="success"
+              onClick={() =>
+                handleOpenLink(work?.repository ? work.repository : "")
+              }
+            >
+              {ShowWorksText(language, "text11")}
+            </Button>
+          )}
+        </div>
       </DialogContent>
     </Dialog>
   );

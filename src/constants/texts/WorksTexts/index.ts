@@ -33,6 +33,18 @@ const worksText = {
     pt: "Tecnologias Utilizadas:",
     en: "Technologies Used:",
   },
+  text9: {
+    pt: "Projeto utilizado para certificação CMMI",
+    en: "Project used for CMMI certification",
+  },
+  text10: {
+    pt: "Link",
+    en: "Link",
+  },
+  text11: {
+    pt: "Repositório",
+    en: "Repository",
+  },
 };
 
 type TWorksText = keyof typeof worksText;
