@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 interface Props {
@@ -6,9 +7,15 @@ interface Props {
 
 const SectionContainer = ({ children }: Props) => {
   return (
-    <section className="py-20 px-[10%] flex justify-center items-center w-screen h-screen">
+    <motion.section
+      className="py-20 px-[10%] flex justify-center items-center w-screen h-screen"
+      initial={{ x: -200, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       {children}
-    </section>
+    </motion.section>
   );
 };
 
