@@ -65,6 +65,10 @@ const aboutText = {
     pt: "Arrastar",
     en: "Drag",
   },
+  text17: {
+    pt: "Apresentação",
+    en: "Presentation",
+  },
 };
 
 type AboutText = keyof typeof aboutText;

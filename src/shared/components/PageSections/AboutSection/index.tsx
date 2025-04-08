@@ -3,26 +3,39 @@
 import { useLanguageStore } from "@/Store";
 import SectionContainer from "../../Container/SectionContainer";
 import { ShowAboutText } from "@/constants";
-import JourneyHistory from "./JourneyHistory";
+import { useState } from "react";
+import { ITab } from "@/shared/interfaces";
+import { Description, Timeline } from "@mui/icons-material";
+import AppTab from "../../AppTab";
+import PresentationBoard from "./Boards/PresentationBoard";
+import JourneyBoard from "./Boards/JourneyBoard";
 
 const AboutSection = () => {
+  const [tabValue, setTabValue] = useState<number>(0);
   const { language } = useLanguageStore();
+  const tabList: ITab[] = [
+    {
+      label: ShowAboutText(language, "text17"),
+      icon: <Description />,
+    },
+    {
+      label: ShowAboutText(language, "text7"),
+      icon: <Timeline />,
+    },
+  ];
   return (
     <SectionContainer>
       <div className="w-full h-[85%] max-h-[85%]">
         <h2 className="text-4-title-size">
           {ShowAboutText(language, "text1")}
         </h2>
-        <div className="flex gap-20 h-[85%] max-h-[85%] ">
-          <div className="w-full overflow-y-auto flex flex-col gap-3 text-justify p-5 bg-default-board rounded-2xl">
-            <h3>{ShowAboutText(language, "text2")}</h3>
-            <h3>{ShowAboutText(language, "text3")}</h3>
-            <h3>{ShowAboutText(language, "text4")}</h3>
-            <h3>{ShowAboutText(language, "text5")}</h3>
-            <h3>{ShowAboutText(language, "text6")}</h3>
-          </div>
-          <JourneyHistory />
-        </div>
+        <AppTab
+          tabValue={tabValue}
+          setTabValue={setTabValue}
+          tabsList={tabList}
+        />
+        {tabValue === 0 && <PresentationBoard />}
+        {tabValue === 1 && <JourneyBoard />}
       </div>
     </SectionContainer>
   );

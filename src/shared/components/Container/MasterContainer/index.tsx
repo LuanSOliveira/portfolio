@@ -7,7 +7,7 @@ interface Props {
 
 const MasterContainer = ({ children }: Props) => {
   return (
-    <div className="bg-[#000000ad] min-h-screen w-full relative z-0">
+    <div className="bg-[#000000c2] min-h-screen w-full relative z-0">
       <Navbar />
       {children}
     </div>
