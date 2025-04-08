@@ -6,6 +6,7 @@ import { useLanguageStore } from "@/Store";
 import { useState } from "react";
 import WorksModal from "../WorksModal";
 import { APP_IMAGES } from "@/assets";
+import { motion } from "framer-motion";
 
 interface Props {
   work: IWorks;
@@ -23,9 +24,11 @@ const WorksCard = ({ work }: Props) => {
     <>
       <WorksModal work={work} open={openModal} setOpen={setOpenModal} />
 
-      <div
+      <motion.div
         className="bg-default-board hover:bg-default-hover-board p-5 rounded-2xl cursor-pointer relative"
         onClick={handleClickOpen}
+        whileHover={{ scale: 1.04 }}
+        whileTap={{ scale: 1 }}
       >
         <div className="flex justify-center items-center bg-white w-[250px] h-[150px] rounded-sm">
           <img
@@ -63,7 +66,7 @@ const WorksCard = ({ work }: Props) => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

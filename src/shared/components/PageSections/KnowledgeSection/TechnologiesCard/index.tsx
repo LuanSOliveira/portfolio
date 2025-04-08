@@ -4,6 +4,7 @@ import { ITechnologies } from "@/shared/interfaces";
 import { useState } from "react";
 import TechnologiesModal from "../TechnologiesModal";
 import TechnologiesRateBoard from "../TechnologiesRateBoard";
+import { motion } from "framer-motion";
 
 interface Props {
   technology: ITechnologies;
@@ -23,9 +24,11 @@ const TechnologiesCard = ({ technology }: Props) => {
         setOpen={setOpenModal}
       />
 
-      <div
+      <motion.div
         className="bg-default-board hover:bg-default-hover-board p-5 rounded-2xl cursor-pointer"
         onClick={handleClickOpen}
+        whileHover={{ scale: 1.04 }}
+        whileTap={{ scale: 1 }}
       >
         <div className="flex justify-center">
           <img
@@ -40,7 +43,7 @@ const TechnologiesCard = ({ technology }: Props) => {
           like={technology.like}
           level={technology.level}
         />
-      </div>
+      </motion.div>
     </>
   );
 };
