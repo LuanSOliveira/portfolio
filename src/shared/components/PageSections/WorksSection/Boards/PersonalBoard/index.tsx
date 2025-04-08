@@ -1,22 +1,39 @@
 "use client";
 
-import { myWorks, ShowWorksText } from "@/constants";
+import {
+  defaultAnimeteMotion,
+  defaultInitialMotion,
+  defaultTransitionMotion,
+  myWorks,
+  ShowWorksText,
+} from "@/constants";
 import { useLanguageStore } from "@/Store";
 import WorksCard from "../../WorksCard";
+import BoardDescriptionText from "@/shared/components/BoardDescriptionText";
+import { motion } from "framer-motion";
 
 const PersonalBoard = () => {
   const { language } = useLanguageStore();
   return (
     <div>
-      <h3>{ShowWorksText(language, "text6")}</h3>
-      <p>{ShowWorksText(language, "text7")}</p>
-      <div className="flex gap-5 flex-wrap mt-5">
+      <BoardDescriptionText>
+        {ShowWorksText(language, "text6")}
+      </BoardDescriptionText>
+      <BoardDescriptionText>
+        {ShowWorksText(language, "text7")}
+      </BoardDescriptionText>
+      <motion.div
+        className="flex gap-5 flex-wrap mt-5"
+        initial={defaultInitialMotion}
+        animate={defaultAnimeteMotion}
+        transition={defaultTransitionMotion}
+      >
         {myWorks
           .filter((work) => work.type === "personal")
           .map((work) => (
             <WorksCard key={work.name} work={work} />
           ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

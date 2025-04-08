@@ -9,6 +9,7 @@ import { Description, Timeline } from "@mui/icons-material";
 import AppTab from "../../AppTab";
 import PresentationBoard from "./Boards/PresentationBoard";
 import JourneyBoard from "./Boards/JourneyBoard";
+import SectionTitle from "../../SectionTitle";
 
 const AboutSection = () => {
   const [tabValue, setTabValue] = useState<number>(0);
@@ -26,9 +27,7 @@ const AboutSection = () => {
   return (
     <SectionContainer>
       <div className="w-full h-[85%] max-h-[85%]">
-        <h2 className="text-4-title-size">
-          {ShowAboutText(language, "text1")}
-        </h2>
+        <SectionTitle>{ShowAboutText(language, "text1")}</SectionTitle>
         <AppTab
           tabValue={tabValue}
           setTabValue={setTabValue}

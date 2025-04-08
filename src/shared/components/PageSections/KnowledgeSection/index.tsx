@@ -9,6 +9,7 @@ import { DeveloperBoard, StarRate } from "@mui/icons-material";
 import { ITab } from "@/shared/interfaces";
 import { useLanguageStore } from "@/Store";
 import { ShowKnowledgeText } from "@/constants/texts/KnowledgeTexts";
+import SectionTitle from "../../SectionTitle";
 
 const KnowledgeSection = () => {
   const [tabValue, setTabValue] = useState<number>(0);
@@ -27,9 +28,7 @@ const KnowledgeSection = () => {
   return (
     <SectionContainer>
       <div className="w-full min-h-[85%]">
-        <h2 className="text-4-title-size">
-          {ShowKnowledgeText(language, "text1")}
-        </h2>
+        <SectionTitle>{ShowKnowledgeText(language, "text1")}</SectionTitle>
         <AppTab
           tabValue={tabValue}
           setTabValue={setTabValue}

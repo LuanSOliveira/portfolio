@@ -9,6 +9,7 @@ import ProfessionalBoard from "./Boards/ProfessionalBoard";
 import PersonalBoard from "./Boards/PersonalBoard";
 import { useLanguageStore } from "@/Store";
 import { ShowWorksText } from "@/constants";
+import SectionTitle from "../../SectionTitle";
 
 const WorksSection = () => {
   const [tabValue, setTabValue] = useState<number>(0);
@@ -26,9 +27,7 @@ const WorksSection = () => {
   return (
     <SectionContainer>
       <div className="w-full min-h-[85%]">
-        <h2 className="text-4-title-size">
-          {ShowWorksText(language, "text1")}
-        </h2>
+        <SectionTitle>{ShowWorksText(language, "text1")}</SectionTitle>
         <AppTab
           tabValue={tabValue}
           setTabValue={setTabValue}

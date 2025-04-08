@@ -4,14 +4,25 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import { ShowAboutText } from "@/constants";
+import {
+  defaultAnimeteMotion,
+  defaultInitialMotion,
+  defaultTransitionMotion,
+  ShowAboutText,
+} from "@/constants";
 import { useLanguageStore } from "@/Store";
+import { motion } from "framer-motion";
 
 const JourneyBoard = () => {
   const { language } = useLanguageStore();
 
   return (
-    <div className="w-full overflow-y-auto flex flex-col gap-3 text-justify p-5 cursor-grab">
+    <motion.div
+      className="w-full overflow-y-auto flex flex-col gap-3 text-justify p-5 cursor-grab"
+      initial={defaultInitialMotion}
+      animate={defaultAnimeteMotion}
+      transition={defaultTransitionMotion}
+    >
       <Swiper
         className="mySwiper max-w-[85%]"
         style={{ paddingBottom: "30px" }}
@@ -81,7 +92,7 @@ const JourneyBoard = () => {
           height: 14px;
         }
       `}</style>
-    </div>
+    </motion.div>
   );
 };
 

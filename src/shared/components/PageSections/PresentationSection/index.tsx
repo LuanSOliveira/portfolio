@@ -4,12 +4,22 @@ import { ShowPresentationText } from "@/constants/texts";
 import SectionContainer from "../../Container/SectionContainer";
 import { useLanguageStore } from "@/Store";
 import TecSlider from "./TecSlider";
+import { motion } from "framer-motion";
+import {
+  defaultAnimeteMotion,
+  defaultInitialMotion,
+  defaultTransitionMotion,
+} from "@/constants";
 
 const PresentationSection = () => {
   const { language } = useLanguageStore();
   return (
     <SectionContainer itemCenter>
-      <div>
+      <motion.div
+        initial={defaultInitialMotion}
+        animate={defaultAnimeteMotion}
+        transition={defaultTransitionMotion}
+      >
         <div className="flex justify-center items-center">
           <div className="flex flex-col gap-4 max-w-3xl">
             <div className="text-center">
@@ -32,7 +42,7 @@ const PresentationSection = () => {
         <div className="mt-5">
           <TecSlider />
         </div>
-      </div>
+      </motion.div>
     </SectionContainer>
   );
 };
