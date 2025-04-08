@@ -10,7 +10,7 @@ import { ShowContactText } from "@/constants";
 const ContactSection = () => {
   const { language } = useLanguageStore();
   return (
-    <SectionContainer>
+    <SectionContainer itemCenter>
       <div className="w-full min-h-[85%]">
         <h2 className="text-4-title-size">
           {ShowContactText(language, "text1")}

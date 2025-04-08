@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${vt323.className} antialiased text-default-size text-default-color overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vt323.className} antialiased text-default-size text-default-color overflow-x-hidden h-full`}
         style={{
           backgroundImage: "url('/bg.jpg')",
           backgroundSize: "cover",

@@ -8,7 +8,7 @@ import TecSlider from "./TecSlider";
 const PresentationSection = () => {
   const { language } = useLanguageStore();
   return (
-    <SectionContainer>
+    <SectionContainer itemCenter>
       <div>
         <div className="flex justify-center items-center">
           <div className="flex flex-col gap-4 max-w-3xl">

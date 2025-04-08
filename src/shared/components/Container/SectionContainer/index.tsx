@@ -3,19 +3,18 @@ import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
+  itemCenter?: boolean;
 }
 
-const SectionContainer = ({ children }: Props) => {
+const SectionContainer = ({ children, itemCenter }: Props) => {
   return (
-    <motion.section
-      className="py-20 px-[10%] flex justify-center items-center w-screen h-screen"
-      initial={{ x: -200, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
+    <section
+      className={`pt-24 pb-2 px-[10%] flex justify-center ${
+        itemCenter && "items-center"
+      } w-screen min-h-screen`}
     >
       {children}
-    </motion.section>
+    </section>
   );
 };
 
